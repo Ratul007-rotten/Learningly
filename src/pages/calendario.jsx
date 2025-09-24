@@ -25,7 +25,7 @@ const events = [
     end: new Date(2025, 8, 26, 15, 0),
   },
   {
-    title: "Pollos en el asador",
+    title: "Clase de Historia",
     start: new Date(2025, 8, 27, 12, 0),
     end: new Date(2025, 8, 27, 13, 0),
   }

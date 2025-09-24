@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Tutos loquendo</h3>
+            <h3>Learningly</h3>
             <p>La plataforma líder en educación online que conecta estudiantes con los mejores profesores.</p>
           </div>
           
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 Tutos loquendo. Todos los derechos reservados.</p>
+          <p>&copy; 2024 Learningly. Todos los derechos reservados.</p>
           <div className="footer-badges">
             <span className="badge">Certificado ISO</span>
             <span className="badge">Seguro SSL</span>

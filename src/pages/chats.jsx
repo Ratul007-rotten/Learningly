@@ -3,7 +3,7 @@ import "./chats.css";
 
 export default function Chat() {
   const [messages, setMessages] = useState([
-    { id: 1, user: "Soporte", text: "¡Hola! ¿En qué puedo ayudarte hoy?" },
+    { id: 1, user: "Maestro", text: "¡Hola! ¿En qué puedo ayudarte hoy?" },
     { id: 2, user: "Tú", text: "Quiero probar el chat de ejemplo." },
   ]);
   const [input, setInput] = useState("");
@@ -29,7 +29,7 @@ export default function Chat() {
 
   return (
     <div className="chat-container">
-      <h1 className="chat-title">Chat Placeholder</h1>
+      <h1 className="chat-title">Chat</h1>
       <div className="messages">
         {messages.map((m) => (
           <div

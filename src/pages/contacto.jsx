@@ -15,7 +15,7 @@ export default function Contacto({ sidebarOpen }) {
   }
 
     const handleSubmit = async (e) => {
-    e.preventDefault()
+
     
     const res = await fetch('http://localhost:4000/contact', {
       method: 'POST',
@@ -31,7 +31,7 @@ export default function Contacto({ sidebarOpen }) {
     <div className={`contacto-container ${sidebarOpen ? 'sidebar-open' : ''}`}>
       <h1>Formulario de Contacto</h1>
       <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos a través del siguiente formulario:</p>
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={handleSubmit}>
         <label>
           Nombre:
           <input type="text" name="name" id='name' value={formData.name} onChange={handleChange} required />
@@ -48,7 +48,7 @@ export default function Contacto({ sidebarOpen }) {
           Mensaje:
           <textarea name="message" id='message' rows="5" value={formData.message} onChange={handleChange} required></textarea>
         </label>
-        <button type="submit" onSubmit={handleSubmit}>Enviar</button>
+        <button type="submit" >Enviar</button>
       </form>
       
     </div>

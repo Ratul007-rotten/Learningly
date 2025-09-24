@@ -31,7 +31,7 @@ const Header = ({ sidebarOpen, setSidebarOpen, searchTerm, setSearchTerm }) => {
                 <path d="M2 12L12 17L22 12" />
               </svg>
             </div>
-            <span className="logo-text">Tutor.ias</span>
+            <span className="logo-text">Learningly</span>
           </Link>
         </div>
 
@@ -66,7 +66,7 @@ const Header = ({ sidebarOpen, setSidebarOpen, searchTerm, setSearchTerm }) => {
               <div className="user-menu">
                 <div className="user-avatar">
                   <img
-                    src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_k9Oc7iiAFosA18iyPmHhSeQGmsVV7bWB3A&s"
                     alt="Usuario"
                   />
                 </div>
