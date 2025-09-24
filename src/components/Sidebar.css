@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 80px;
+
 }
 
 .sidebar-header {
@@ -152,17 +152,8 @@
   color: white;
 }
 
-@media (min-width: 1024px) {
-  .sidebar-overlay {
-    display: none;
-  }
-  
-  .sidebar-close {
-    display: none;
-  }
-}
 
-@media (max-width: 1023px) {
+@media (max-width: 2000px) {
   .sidebar {
     box-shadow: var(--shadow-lg);
   }
