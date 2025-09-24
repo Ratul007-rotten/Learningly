@@ -1,9 +1,11 @@
+/* ===== Reset básico ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== Variables ===== */
 :root {
   --primary-color: #2563EB;
   --secondary-color: #059669;
@@ -11,24 +13,25 @@
   --success-color: #10B981;
   --warning-color: #F59E0B;
   --error-color: #EF4444;
-  
+
   --text-primary: #1F2937;
   --text-secondary: #6B7280;
   --text-light: #9CA3AF;
-  
+
   --bg-primary: #FFFFFF;
   --bg-secondary: #F9FAFB;
   --bg-tertiary: #F3F4F6;
-  
+
   --border-color: #E5E7EB;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  
+
   --border-radius: 12px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ===== Estructura general ===== */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   line-height: 1.6;
@@ -43,22 +46,30 @@ body {
   flex-direction: column;
 }
 
+/* Contenido principal: ocupa el espacio libre entre header y footer */
 .main-content {
   flex: 1;
-  padding-top: 80px;
+  padding-top: 80px; /* igual a la altura del header fijo */
+  background: #fff;
   transition: var(--transition);
-  margin-left: 0;
+  min-height: calc(100vh - 80px);
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .main-content.sidebar-open {
-  margin-left: 280px;
+  margin-left: 280px;         /* si se abre el sidebar */
 }
 
+/* ===== Layout interno ===== */
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
+  min-height: 60vh;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
+
+
 
 .welcome-section {
   text-align: center;
@@ -82,16 +93,16 @@ body {
 
 .classes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
   align-items: start;
 }
 
+/* ===== Responsivo ===== */
 @media (max-width: 1024px) {
   .main-content.sidebar-open {
     margin-left: 0;
   }
-  
   .classes-grid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5rem;
@@ -102,15 +113,12 @@ body {
   .container {
     padding: 1.5rem 1rem;
   }
-  
   .welcome-section h1 {
     font-size: 2rem;
   }
-  
   .welcome-section p {
     font-size: 1.1rem;
   }
-  
   .classes-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -121,8 +129,15 @@ body {
   .welcome-section h1 {
     font-size: 1.75rem;
   }
-  
   .container {
     padding: 1rem 0.75rem;
   }
+}
+
+/* ===== Footer sugerido ===== */
+footer {
+  margin-top: auto;           /* se pega al final de la página */
+  background: var(--bg-tertiary);
+  text-align: center;
+  padding: 1.5rem;
 }

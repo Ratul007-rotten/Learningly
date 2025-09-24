@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Sidebar.css'
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -10,7 +11,8 @@ const Sidebar = ({ isOpen, onClose }) => {
         </svg>
       ),
       label: 'Mis Clases',
-      count: 12
+      count: 12,
+      path: '/mis-clases'   // 👈 ruta hacia la página MisClases.jsx
     },
     {
       icon: (
@@ -22,7 +24,8 @@ const Sidebar = ({ isOpen, onClose }) => {
         </svg>
       ),
       label: 'Calendario',
-      count: 5
+      count: 5,
+      path: '/calendario'   // puedes crear esta página después
     },
     {
       icon: (
@@ -31,7 +34,8 @@ const Sidebar = ({ isOpen, onClose }) => {
         </svg>
       ),
       label: 'Chats',
-      count: 8
+      count: 8,
+      path: '/chats'        // puedes crear esta página después
     }
   ]
 
@@ -42,7 +46,8 @@ const Sidebar = ({ isOpen, onClose }) => {
         <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/>
       </svg>
     ),
-    label: 'Contacto'
+    label: 'Contacto',
+    path: '/contacto'
   }
 
   return (
@@ -65,21 +70,21 @@ const Sidebar = ({ isOpen, onClose }) => {
             <ul className="nav-list">
               {menuItems.map((item, index) => (
                 <li key={index} className="nav-item">
-                  <a href="#" className="nav-link">
+                  <Link to={item.path} className="nav-link" onClick={onClose}>
                     <span className="nav-icon">{item.icon}</span>
                     <span className="nav-text">{item.label}</span>
                     {item.count && <span className="nav-badge">{item.count}</span>}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
           
           <div className="sidebar-footer">
-            <a href="#" className="nav-link contact-link">
+            <Link to={bottomMenuItem.path} className="nav-link contact-link" onClick={onClose}>
               <span className="nav-icon">{bottomMenuItem.icon}</span>
               <span className="nav-text">{bottomMenuItem.label}</span>
-            </a>
+            </Link>
           </div>
         </div>
       </aside>

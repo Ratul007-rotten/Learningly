@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import './ClassCard.css'
 
 const ClassCard = ({ classData }) => {
@@ -67,14 +68,19 @@ const ClassCard = ({ classData }) => {
             </svg>
             <span>{classData.nextClass}</span>
           </div>
-          
+
+       <Link to= {`/about?classId=${classData.id}`} style={{ textDecoration: 'none' }}>
           <button className="join-btn">
-            Unirse
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12,5 19,12 12,19"/>
-            </svg>
+           
+              Unirse
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12,5 19,12 12,19"/>
+              </svg>
+           
           </button>
+         </Link>
+
         </div>
       </div>
     </div>

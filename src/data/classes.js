@@ -1,8 +1,9 @@
-import React from 'react'
-import { useOutletContext } from 'react-router-dom'
-import ClassCard from '../components/ClassCard'
+// Este JSON simula datos de clases para propósitos de desarrollo y pruebas.
+// En un entorno real, estos datos podrían provenir de una base de datos o una API.
+// Para el que este leyendo esto, recuerda que si vas a usar valores de una base de datos procura desenlazar estos datos para evitar problemas.
 
-const mockClasses = [
+
+const classes = [
   {
     id: 1,
     title: "Matemáticas Avanzadas",
@@ -11,8 +12,7 @@ const mockClasses = [
     level: "Avanzado",
     rating: 4.8,
     students: 45,
-    image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=400",
-  
+    image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   {
     id: 2,
@@ -71,30 +71,4 @@ const mockClasses = [
   }
 ]
 
-export default function Home() {
-  const { sidebarOpen, searchTerm } = useOutletContext()
-
-  const filteredClasses = mockClasses.filter(classItem =>
-    classItem.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    classItem.teacher.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    classItem.subject.toLowerCase().includes(searchTerm.toLowerCase())
-  )
-
-  return (
-    <div className={`container`}>
-      <div className="welcome-section">
-        <h1>Clases Recomendadas Para Ti</h1>
-        <p>Descubre las mejores tutorías adaptadas a tu nivel y necesidades</p>
-      </div>
-      <div className="classes-grid">
-        {filteredClasses.map(classItem => (
-            
-          <ClassCard 
-            key={classItem.id} 
-            classData={classItem} 
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
+export default classes

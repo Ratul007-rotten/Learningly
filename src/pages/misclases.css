@@ -1,0 +1,54 @@
+.misclases-container {
+  padding: 20px;
+  margin-top: 19rem;
+  transition: margin-left 0.3s ease;
+}
+
+.misclases-container.sidebar-open {
+  margin-left: 0; /* cuando sidebar se abre encima, el contenido se ajusta */
+  
+}
+
+.misclases-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.misclases-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* responsivo */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.misclases-list li {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.misclases-list li:hover {
+  transform: translateY(-5px);
+}
+
+.misclases-list img {
+  border-radius: 8px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.misclases-list h2 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.misclases-list p {
+  color: #666;
+  font-size: 14px;
+}
