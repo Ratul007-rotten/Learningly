@@ -8,6 +8,8 @@ import About from './pages/about.jsx'
 import Login from './pages/login'
 import MisClases from './pages/misclases.jsx'
 import Contacto from './pages/contacto.jsx'
+import MyCalendar from './pages/calendario.jsx'
+import Chat from './pages/chats.jsx'
 import { ClassesProvider } from './context/ClassesContext.jsx'
 import './index.css'
 
@@ -22,6 +24,8 @@ createRoot(document.getElementById('root')).render(
             <Route path="about" element={<About />} />
             <Route path="mis-clases" element={<MisClases />} />
             <Route path="contacto" element={<Contacto />} />
+            <Route path="calendario" element={<MyCalendar />} />
+            <Route path="chats" element={<Chat />} />
           </Route>
 
          

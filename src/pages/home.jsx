@@ -12,6 +12,7 @@ const mockClasses = [
     rating: 4.8,
     students: 45,
     image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=400",
+    nextClass: "Mañana 10:00 AM"
   
   },
   {
